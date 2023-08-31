@@ -1,5 +1,4 @@
 package com.osm.chat_app.chat;
-
 import lombok.*;
 
 @Getter
@@ -9,7 +8,8 @@ import lombok.*;
 @Builder
 public class ChatMessage {
 
+    private MessageType type;
     private String content;
     private String sender;
-    private MessageType type;
+
 }

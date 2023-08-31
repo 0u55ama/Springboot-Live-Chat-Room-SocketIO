@@ -1,6 +1,5 @@
 package com.osm.chat_app.chat;
 
-import com.osm.chat_app.chat.ChatMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -18,7 +17,7 @@ public class ChatController {
         return chatMessage;
     }
 
-    @MessageMapping("/chat.sendMessage")
+    @MessageMapping("/chat.addUser")
     @SendTo("/topic/public")
     public ChatMessage addUser(
             @Payload ChatMessage chatMessage,
